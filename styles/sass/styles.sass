@@ -1,0 +1,1093 @@
+@import url(https://fonts.googleapis.com/css?family=Karla:400,700)
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,700,800)
+@import url(https://fonts.googleapis.com/css?family=Open+Sans)
+@import url(https://fonts.googleapis.com/css?family=Lora:400italic)
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab)
+@import compass
+@import compass/css3/user-interface
+@import variables
+@import compass/css3
+@import compass/layout
+@import compass/typography
+@import compass/utilities
+
+/*-----------RESET STYLES-------------*/
+*
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+
+a,p
+  text-decoration: none
+
+a, button, i, input
+  -webkit-transition: 0.2s ease-out
+  -moz-transition: 0.2s ease-out
+  -o-transition: 0.2s ease-out
+  transition: 0.2s ease-out
+
+ul
+  list-style: none
+
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea
+  padding: 0
+  margin: 0
+  line-height: 1em
+/*--------END RESET STYLES------------*/
+
+/*---------RESET BOOTSTRAP STYLES-----*/
+.navbar>.container .navbar-brand,
+.navbar>.container-fluid .navbar-brand
+  margin: 0
+/*-----END RESET BOOTSTRAP STYLES-----*/
+
+/*--------PERSONAL-DATE STYLES--------*/
+.personal-date
+  padding: 15px 0
+  background: $personal-bg
+  p
+    font: 400 13px 'Karla', sans-serif
+    text-transform: uppercase
+    color: $light-grey
+  .address
+    margin-bottom: 0
+    .mobile-phone, .email
+      position: relative
+      padding-left: 25px
+      font: 400 14px 'Karla', sans-serif
+      color: $light-grey
+    .email
+      margin-left: 50px
+      font-size: 13px
+      text-transform: uppercase
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: 50%
+        margin-top: -8px
+        width: 20px
+        height: 17px
+        background: url("../../images/email-icon.png") no-repeat
+    .mobile-phone
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: 50%
+        margin-top: -9px
+        width: 11px
+        height: 18px
+        background: url("../../images/phone-icon.png") no-repeat
+/*-----END PERSONAL-DATE STYLES-------*/
+
+/*------------HEADER STYLES-----------*/
+.header
+  .navbar-inverse
+    margin-bottom: 0
+    padding: 20px 0
+    background: transparent
+    border: none
+
+.navbar-collapse
+  .navbar-nav
+    float: right
+    padding-top: 12px
+    li
+      a
+        padding-top: 12px
+        font: 400 15px 'Karla', sans-serif
+        text-transform: uppercase
+        color: $light-grey
+        &:hover
+          color: $header-hover
+      .hvr-underline-from-center:before
+        background: $light-grey
+        height: 1px
+        bottom: 5px
+    .button
+      .btn-primary
+        color: $white-color
+        &:hover
+          color: $light-grey
+          background-color: transparent
+    .dropdown
+      .dropdown-toggle
+        color: $light-grey
+        background: transparent
+        &:focus, &:hover
+          color: $light-grey
+          background: transparent
+      .dropdown-menu
+        min-width: 120px
+        border: none
+        a
+          color: $light-grey
+          &:hover
+            color: $header-hover
+/*---------END HEADER STYLES----------*/
+
+/*----------BUTTON STYLES-------------*/
+.button
+  display: inline-block
+  .btn-primary
+    padding: 10px 30px
+    background-color: $blue-color
+    border-radius: 50px
+    border: none
+    color: $white-color
+    &:hover
+      color: $light-grey
+      background-color: transparent
+/*--------END BUTTON STYLES-----------*/
+
+/*----------WELCOME STYLES------------*/
+.carousel-caption
+  padding-top: 0
+  top: 50%
+  margin-top: -50px
+  h2
+    margin-bottom: 10px
+    font: 700 48px 'Raleway', sans-serif
+    text-transform: uppercase
+  p
+    font: 400 14px 'Raleway', sans-serif
+    text-transform: uppercase
+
+.carousel-indicators
+  li
+    position: relative
+    .hover-wrap
+      position: relative
+      display: none
+      .hover
+        position: absolute
+        top: -90px
+        left: -35px
+        border: 2px solid $white-color
+        border-radius: 50px
+      &::before
+        content: ''
+        position: absolute
+        right: 50%
+        margin-right: -4px
+        bottom: 6px
+        width: 9px
+        height: 8px
+        background: url("../../images/arrow.png") no-repeat
+    &:hover .hover-wrap
+      display: block
+    &.active
+      &:hover .hover-wrap
+        display: none
+/*-------END WELCOME STYLES-----------*/
+
+/*----------STARTUP STYLES------------*/
+.startup
+  padding-top: 80px
+  p
+    font-family: 'OpenSans', sans-serif
+    font-size: 14px
+    font-weight: 400
+    line-height: 24px
+    color: $dark-grey
+
+/*---------PAGE-HEADER STYLES---------*/
+.page-header
+  margin: 0
+  padding: 0
+  border-bottom: none
+  h3
+    margin-bottom: 25px
+    font: 700 30px 'Raleway', sans-serif
+    text-transform: uppercase
+    color: $header-hover
+    span
+      display: block
+      font: 400 18px 'Karla', sans-serif
+      text-transform: uppercase
+      color: $header-hover
+  p
+    margin-bottom: 30px
+/*------END PAGE-HEADER STYLES--------*/
+
+.startup-list
+  padding-left: 90px
+  li
+    padding: 0 0 30px 30px
+    h4
+      position: relative
+      margin-bottom: 10px
+      font: 500 20px 'Raleway', sans-serif
+      color: $header-hover
+    .boost
+      &::before
+        content: ''
+        position: absolute
+        width: 67px
+        height: 67px
+        top: 0
+        left: -95px
+        background: url("../../images/boost-icon.png") -5px -5px no-repeat
+      &:hover::before
+        background-position: -83px -5px
+    .data
+      &::before
+        content: ''
+        position: absolute
+        width: 67px
+        height: 67px
+        top: 0
+        left: -95px
+        background: url("../../images/data-icon.png") -5px -5px no-repeat
+      &:hover::before
+        background-position: -82px -5px
+    .solutions
+      &::before
+        content: ''
+        position: absolute
+        width: 67px
+        height: 67px
+        top: 0
+        left: -95px
+        background: url("../../images/solution-icon.png") -5px -5px no-repeat
+      &:hover::before
+        background-position: -82px -5px
+/*--------END STARTUP STYLES----------*/
+
+/*------------CLIENTS STYLES------------*/
+.clients
+  padding: 80px 0
+  background: $personal-bg
+  .page-header
+    position: relative
+    margin-bottom: 50px
+    &::before
+      content: ''
+      position: absolute
+      top: 110px
+      left: 0
+      width: 56px
+      height: 48px
+      background: url("../../images/quote-icon.png") no-repeat
+  p
+    padding-left: 90px
+    font-family: 'Lora', sans-serif
+    font-size: 15px
+    font-style: italic
+    line-height: 24px
+    color: $header-hover
+  .comment
+    position: relative
+    margin-bottom: 30px
+  .name
+    font: 400 14px 'Karla', sans-serif
+    color: $dark-grey
+    span
+      display: block
+      margin-top: 5px
+      text-transform: uppercase
+      color: $oringe-color
+
+.clients
+  .item
+    li
+      margin-right: 35px
+      &:last-child
+        margin-right: 0
+
+.clients
+  .carousel-indicators
+    li
+      position: relative
+      margin-right: 10px
+      background: $light-grey
+      border-color: $light-grey
+      img
+        position: absolute
+        bottom: 55px
+      .men
+        right: 75px
+      .user
+        left: 65px
+      .women
+        left: -65px
+    .active
+      background: $blue-color
+      border-color: $blue-color
+      & img
+        transform: scale(1.2, 1.2)
+
+/*----------END CLIENTS STYLES----------*/
+
+/*------------FUTURE STYLES------------*/
+.future
+  padding-top: 80px
+  .container
+    position: relative
+    padding-bottom: 100px
+    border-bottom: 1px solid $personal-bg
+    &::before
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 136px
+      height: 109px
+      background: url("../../images/orange-shape.png") no-repeat
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 100px
+      width: 106px
+      height: 79px
+      background: url("../../images/blue-shape.png") no-repeat
+    .page-header
+      margin-bottom: 70px
+    .button
+      display: block
+      text-align: center
+      .btn-primary
+        padding: 12px 30px
+        font: 400 15px 'Karla', sans-serif
+        text-transform: uppercase
+
+
+.future-list
+  padding-bottom: 30px
+  li
+    margin-bottom: 70px
+    p
+      padding-left: 90px
+      font-family: 'OpenSans', sans-serif
+      font-size: 14px
+      font-weight: 400
+      line-height: 24px
+      color: $dark-grey
+    h4
+      position: relative
+      padding-left: 90px
+      margin-bottom: 10px
+      font: 500 20px 'Raleway', sans-serif
+      color: $header-hover
+      &:hover::before
+        background-position: -83px -5px
+    .entry
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 68px
+        height: 68px
+        background: url("../../images/entry-icon.png") -5px -5px no-repeat
+    .management
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 68px
+        height: 68px
+        background: url("../../images/management-icon.png") -5px -5px no-repeat
+    .communication
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 68px
+        height: 68px
+        background: url("../../images/communication-icon.png") -5px -5px no-repeat
+    .analyzing
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 68px
+        height: 68px
+        background: url("../../images/analyzing-icon.png") -5px -5px no-repeat
+    .support
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 68px
+        height: 68px
+        background: url("../../images/support-icon.png") -5px -5px no-repeat
+    .business
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 68px
+        height: 68px
+        background: url("../../images/business-icon.png") -5px -5px no-repeat
+/*---------END FUTURE STYLES-----------*/
+
+/*-----------PRISING STYLES-----------*/
+.pricing
+  padding: 50px 0
+  .page-header
+    margin-bottom: 40px
+  .pricing-list
+    text-align: center
+
+.wrap
+  margin: 0 auto
+  padding: 30px 0
+  max-width: 260px
+  border: 1px solid $personal-bg
+  h4
+    position: relative
+    padding-bottom: 10px
+    font: 700 20px 'Raleway', sans-serif
+    text-transform: uppercase
+    color: $header-hover
+    border-bottom: 1px solid $personal-bg
+    &::before
+      content: ''
+      position: absolute
+      width: 38px
+      height: 1px
+      bottom: -1px
+      background: url("../../images/orange-line.png") no-repeat
+  p
+    padding: 15px 0
+    font: 500 18px 'Raleway', sans-serif
+    color: $prison-grey
+    border-bottom: 1px solid $personal-bg
+    span
+      color: $oringe-color
+  ul
+    padding: 30px 0 60px 0
+    min-height: 218px
+    li
+      margin-bottom: 20px
+      font: 400 15px 'OpenSans', sans-serif
+      &:last-child
+        margin-bottom: 0
+  .button
+    .btn-primary
+      font: 400 15px 'Karla', sans-serif
+      text-transform: uppercase
+
+.business-wrap
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    width: 93px
+    height: 94px
+    left: 0
+    top: 0
+    background: url("../../images/recommend.png") no-repeat
+    z-index: 1
+/*--------END PRISING STYLES----------*/
+
+/*-----------OUR-TEAM STYLES----------*/
+.our-team
+  padding: 80px 0
+  background: $personal-bg
+
+.team-wrap
+  margin: 0 auto
+  padding-bottom: 30px
+  max-width: 263px
+  background: $white-color
+  p
+    padding: 30px 0 0 20px
+    margin-bottom: 10px
+    font: 400 14px 'Karla', sans-serif
+    text-transform: uppercase
+    color: $header-hover
+    span
+      display: block
+      padding-top: 5px
+      text-transform: none
+      color: $oringe-color
+  .social
+    padding-left: 30px
+    li
+      margin-right: 10px
+      .fa
+        color: $social-color
+      .fa-facebook:hover
+        color: $social-fasebook
+      .fa-twitter:hover
+        color: $social-twitter
+      .fa-google-plus:hover
+        color: $social-google
+/*--------END OUR-TEAM STYLES---------*/
+
+/*----------SERVICE STYLES------------*/
+.service
+  .jumbotron
+    margin-bottom: 0
+    padding: 100px 0 0 0
+    text-align: center
+    background: transparent
+    .container
+      padding-bottom: 100px
+      border-bottom: 1px solid $personal-bg
+      h2
+        margin-bottom: 10px
+        font: 500 30px 'Raleway', sans-serif
+        color: $header-hover
+        span
+          color: $oringe-color
+      p
+        margin-bottom: 35px
+        font: 400 13px 'Raleway', sans-serif
+        text-transform: uppercase
+        color: $service-color
+    .button
+      margin-right: 20px
+      .btn-primary
+        width: 135px
+        font: 400 15px 'Karla', sans-serif
+        text-transform: uppercase
+    .contact
+      .btn-primary
+        background: $oringe-color
+        &:hover
+          background: transparent
+/*-------END SERVICE STYLES-----------*/
+
+/*-----------FOOTER STYLES------------*/
+.footer
+  .container
+    padding-bottom: 70px
+    border-bottom: 1px solid $personal-bg
+
+.footer
+  position: relative
+  padding: 70px 0
+  font: 400 14px 'Karla', sans-serif
+  text-transform: uppercase
+  color: $light-grey
+  &::after
+    content: ''
+    position: absolute
+    bottom: 57px
+    left: 0
+    width: 453px
+    height: 314px
+    background: url("../../images/orange-background.png") no-repeat
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 502px
+    height: 347px
+    background: url("../../images/blue-background.png") no-repeat
+  a
+    text-decoration: none
+    color: $light-grey
+    &:hover
+      color: $header-hover
+  h3
+    font: 500 18px 'Raleway', sans-serif
+    text-transform: none
+    color: $header-hover
+  ul
+    padding-top: 20px
+    li
+      margin-bottom: 15px
+  .menu
+    .hvr-underline-from-center:before
+      height: 1px
+      background: $light-grey
+  .social-menu
+    ul
+      padding-top: 40px
+    .social
+      padding: 0 0 0 10px
+      li
+        margin-right: 10px
+  .address
+    p
+      color: $info-color
+    span, a
+      color: $light-grey
+    a:hover
+      color: $header-hover
+  .form-group
+    padding-top: 20px
+    margin-bottom: 0
+    label
+      margin-bottom: 15px
+      font-weight: 400
+    input[type="email"]
+      padding: 15px 15px
+      border-radius: 0
+      +input-placeholder
+        text-transform: uppercase
+    .input-group-addon
+      background: $blue-color
+      a
+        color: $white-color
+  .right
+    padding-top: 20px
+    text-align: center
+/*--------END FOOTER STYLES-----------*/
+
+/*----------BLOG-PAGE STYLES----------*/
+.blog
+  padding-top: 100px
+  h3
+    padding-top: 30px
+    margin-bottom: 10px
+    font: 700 24px 'Raleway', sans-serif
+    text-transform: uppercase
+    color: $header-hover
+  .button
+    .btn-primary
+      font: 400 15px 'Karla', sans-serif
+      text-transform: uppercase
+/*----------BLOG-INFO STYLES----------*/
+.blog
+  .blog-info
+    p
+      padding: 40px 0
+      font-family: 'OpenSans', sans-serif
+      font-size: 14px
+      font-weight: 400
+      line-height: 22px
+      color: $dark-grey
+      .stick
+        padding-left: 15px
+        position: relative
+        &::before
+          content: ''
+          position: absolute
+          top: 50%
+          margin-top: -7px
+          left: 5px
+          width: 1px
+          height: 14px
+          background: url("../../images/stick.png") no-repeat
+    .post
+      padding: 0
+      font: 400 15px 'Karla', sans-serif
+      text-transform: uppercase
+      color: $header-hover
+      span
+        color: $oringe-color
+/*-------END BLOG-INFO STYLES----------*/
+/*-INFO-IMG, SLIDER,VIDEO,AUDIO STYLES-*/
+.blog
+  .info-img
+    padding-bottom: 70px
+    border-bottom: 1px solid $personal-bg
+  .info-slider, .video-info
+    padding: 70px 0
+    border-bottom: 1px solid $personal-bg
+  .info-slider
+    img
+      width: 100%
+      height: auto
+    .carousel-control
+      color: transparent
+      text-shadow: 0 0 0px rgba(0,0,0, .4)
+      opacity: 1.5
+      .glyphicon-chevron-left, .glyphicon-chevron-right
+        width: 23px
+        height: 23px
+        font-size: 20px
+        border-radius: 50px
+        background-image: none
+        opacity: 1
+        background: $white-color
+  .audio-info
+    padding: 70px 0
+    .embed-responsive
+      padding-bottom: 30px
+      audio
+        width: 100%
+/*-END INFO-IMG, SLIDER,VIDEO,AUDIO STYLES-*/
+/*-----------PAGINATION------------*/
+.blog
+  .pagination
+    li
+      display: block
+      margin-right: 10px
+      border: none
+      &:hover
+        border: none
+      a
+        color: $white-color
+        background: $blue-color
+        border-radius: 0
+        border: none
+        &:hover
+          background: $oringe-color
+        &:focus
+          outline: none
+          border: none
+    .point
+      padding-top: 10px
+      font-size: 15px
+      font-weight: 700
+    .active
+      border: none
+      background: $oringe-color
+/*------------END PAGINATION----------*/
+/*--------END BLOG-PAGE STYLES--------*/
+
+/*----------SIDEBAR STYLES------------*/
+.blog-side
+  li
+    margin-bottom: 25px
+    img
+      padding-left: 10px
+
+.blog-side
+  .input-group
+    &:focus
+      outline: none
+    .form-control
+      box-shadow: none
+      &:focus
+        border-color: #ccc
+        outline: none
+        box-shadow: none
+  .input-group-btn
+    .btn
+      border-left: none
+      &:hover
+        background: none
+  h3
+    margin-bottom: 20px
+    font: 500 20px 'Raleway', sans-serif
+    text-transform: none
+    color: $header-hover
+/*-------------CATEGORIES-----------*/
+.blog
+  .categories
+    li
+      margin-bottom: 20px
+      a
+        position: relative
+        display: block
+        font: 400 13px 'Karla', sans-serif
+        text-transform: uppercase
+        text-decoration: none
+        color: $dark-grey
+        &:hover
+          color: $oringe-color
+        &::before
+          content: ''
+          position: absolute
+          right: 0
+          top: 50%
+          margin-top: -4px
+          width: 5px
+          height: 8px
+          background: url("../../images/arrow-right.png") -5px -5px no-repeat
+        &:hover::before
+          background-position: -20px -5px
+/*----------END CATEGORIES----------*/
+/*-----------POST STYLES------------*/
+.post-wrap
+  margin: auto
+  h4
+    font: 400 15px 'Karla', sans-serif
+    text-transform: uppercase
+    a
+      color: $header-hover
+      text-decoration: none
+      &:hover
+        color: $oringe-color
+  p
+    padding: 0
+    font: 400 14px 'Karla', sans-serif
+    span
+      color: $oringe-color
+/*----------END POST STYLES----------*/
+/*------------TAG STYLES-------------*/
+.tags
+  .tags-list
+    li
+      padding: 15px 15px
+      margin: 0 10px 10px 0
+      background: $blue-color
+      &:hover
+        background: $oringe-color
+      a
+        font: 400 13px 'Karla', sans-serif
+        text-transform: uppercase
+        text-decoration: none
+        color: $white-color
+  .row
+    margin-left: 0
+/*----------END TAG STYLES------------*/
+/*-------END SIDEBAR STYLES-----------*/
+
+/*----------BLOG-POST STYLES----------*/
+.blog
+  .article-info
+    border-bottom: none
+  .heading-list
+    margin-left: 70px
+    li
+      position: relative
+      margin-bottom: 20px
+      padding-left: 25px
+      font: 400 13px 'Karla', sans-serif
+      text-transform: uppercase
+      color: $header-hover
+      &:last-child
+        margin-bottom: 0
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: 50%
+        margin-top: -4px
+        width: 11px
+        height: 8px
+        background: url("../../images/ok-icon.png") no-repeat
+/*----------------AUTHOR--------------*/
+.blog
+  .author
+    display: flex
+    padding: 30px
+    background: $personal-bg
+    .author-write
+      padding-left: 40px
+      margin: auto
+      p
+        padding: 15px 0
+      .post
+        padding: 0
+/*-------------END AUTHOR--------------*/
+/*--------------COMMENTS---------------*/
+.user-comments
+  display: flex
+  padding: 40px 0
+  border-bottom: 1px solid $personal-bg
+  .user-photo
+    margin: auto
+  .comment
+    margin-left: 40px
+    p
+      padding: 15px 0 0 0
+    .post
+      span
+        padding-left: 15px
+        font-size: 13px
+        color: $header-hover
+      a
+        position: absolute
+        right: 0
+        text-decoration: none
+        color: $oringe-color
+        &:hover
+          color: $light-grey
+
+.blog
+  .reply
+    padding-left: 100px
+/*------------END COMMENTS -----------*/
+/*------------YOUR-COMMENT -----------*/
+.your-comment
+  .form
+    padding: 50px 0 90px 0
+    border-bottom: 1px solid $personal-bg
+    .form-group
+      padding: 0
+    .form-control
+      margin-bottom: 25px
+      border: none
+      border-radius: 0
+      background: $personal-bg
+      +input-placeholder
+        text-transform: uppercase
+        color: $header-hover
+    .btn
+      padding: 10px 45px
+      font: 400 15px 'Karla', sans-serif
+      text-transform: uppercase
+      color: $white-color
+      background: $blue-color
+      border: none
+      border-radius: 50px
+      &:hover
+        color: $light-grey
+        background: transparent
+
+.your-comment
+  .form-wrap
+    padding: 0 15px 0 0
+    &:last-child
+      padding-right: 0
+    input
+      width: 100%
+      margin-bottom: 25px
+      border: none
+      background: $personal-bg
+      border-radius: 0
+      +input-placeholder
+        text-transform: uppercase
+        color: $header-hover
+/*---------END YOUR-COMMENT ----------*/
+/*-------END BLOG-POST STYLES---------*/
+
+/*----------ABOUT-US STYLES-----------*/
+/*----------WELCOME STYLES------------*/
+.welcome-about
+  padding: 115px 0
+  background: url("../../images/work-page.png") no-repeat
+  h2
+    margin-bottom: 10px
+    text-align: center
+    font: 700 48px 'Raleway', sans-serif
+    text-transform: uppercase
+    color: $white-color
+  p
+    text-transform: uppercase
+    font: 400 14px 'Raleway', sans-serif
+    color: $white-color
+/*-------END WELCOME STYLES-----------*/
+
+/*-----------WE-ARE STYLES------------*/
+.we-are
+  padding: 90px 0 80px 0
+  .about
+    padding-bottom: 70px
+    border-bottom: 1px solid $personal-bg
+    p
+      padding: 0 20px 0 10px
+      font-family: 'OpenSans', sans-serif
+      font-size: 14px
+      font-weight: 400
+      line-height: 22px
+      color: $dark-grey
+      &:last-child
+        padding: 0 10px 0 20px
+  .merit-list
+    padding-top: 70px
+    li
+      p
+        position: relative
+        padding-left: 55px
+        font: 400 14px 'Karla', sans-serif
+        text-transform: uppercase
+        color: $header-hover
+        span
+          display: block
+          font-size: 60px
+      .marketing
+        &::before
+          content: ''
+          position: absolute
+          left: 0
+          top: 12px
+          width: 40px
+          height: 40px
+          background: url("../../images/marketing-icon.png") no-repeat
+      .team
+        &::before
+          content: ''
+          position: absolute
+          left: 0
+          top: 12px
+          width: 42px
+          height: 30px
+          background: url("../../images/team-icon.png") no-repeat
+      .projects
+        &::before
+          content: ''
+          position: absolute
+          left: 0
+          top: 10px
+          width: 40px
+          height: 41px
+          background: url("../../images/projects-icons.png") no-repeat
+      .certification
+        &::before
+          content: ''
+          position: absolute
+          left: 0
+          top: 13px
+          width: 40px
+          height: 40px
+          background: url("../../images/certification-icon.png") no-repeat
+/*--------END WE-ARE STYLES-----------*/
+
+.future-list
+  li
+    h4
+      position: relative
+      &:hover::before
+        background-position: 0
+    .entry-about
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 43px
+        height: 38px
+        background: url("../../images/entry-about.png") no-repeat
+    .management-about
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 56px
+        height: 48px
+        background: url("../../images/management-about.png") no-repeat
+    .communication-about
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 43px
+        height: 47px
+        background: url("../../images/communication-about.png") no-repeat
+    .analyzing-about
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 49px
+        height: 40px
+        background: url("../../images/analyzing-about.png") no-repeat
+    .support-about
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 33px
+        height: 45px
+        background: url("../../images/support-about.png") no-repeat
+    .business-about
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 43px
+        height: 39px
+        background: url("../../images/business-about.png") no-repeat
+/*-------END ABOUT-US STYLES----------*/
+
+
+
+
+
+@import media1200
+@import media992
+@import media768
+@import media320
