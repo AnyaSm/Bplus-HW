@@ -298,25 +298,16 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
 
 .clients
   .carousel-indicators
+    bottom: -55px
     li
       position: relative
       margin-right: 10px
       background: $light-grey
       border-color: $light-grey
-      img
-        position: absolute
-        bottom: 55px
-      .men
-        right: 75px
-      .user
-        left: 65px
-      .women
-        left: -65px
     .active
       background: $blue-color
       border-color: $blue-color
-      & img
-        transform: scale(1.2, 1.2)
+
 
 /*----------END CLIENTS STYLES----------*/
 
@@ -817,6 +808,7 @@ div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,
       padding: 15px 15px
       margin: 0 10px 10px 0
       background: $blue-color
+      flex-grow: 1
       &:hover
         background: $oringe-color
       a
